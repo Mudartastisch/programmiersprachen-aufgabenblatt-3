@@ -15,7 +15,6 @@
 
 # Fortran module files
 *.mod
-*.smod
 
 # Compiled Static libraries
 *.lai
@@ -27,3 +26,21 @@
 *.exe
 *.out
 *.app
+
+# Temporary files
+*~
+.nfs*
+
+# build directory
+[Bb]uild
+
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+CMakeFiles
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
