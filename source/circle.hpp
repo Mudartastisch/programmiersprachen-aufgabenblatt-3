@@ -3,6 +3,10 @@
 #include "vec2.hpp"
 #include "color.hpp"
 #include "window.hpp"
+#include <string>
+
+using namespace std; 
+
 
 class Circle
 {
@@ -10,11 +14,16 @@ private:
     Vec2 center;
     float radius;
     Color color;
+    string name;
 public:
-    Circle();
-    Circle(Vec2 v, float r, Color c);
+    Circle(Vec2 const& c, float i, Color const& cl, string n):center(c), radius(i), color(cl), name(n) {}
 
     float getRadius();
+    string getName();
+    void setColor(Color const & c);
+    bool operator<(const Circle& rhs) const;
+
+    void debug();
 
     void draw(Window const& win);
     void draw(Window const& win, float thickness);

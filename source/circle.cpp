@@ -8,20 +8,28 @@
 
 #include <iostream>
 
-Circle::Circle(){
-    center = Vec2();
-    radius = 1.0f;
-    color = Color();
-}
-
-Circle::Circle(Vec2 v, float r, Color c){
-    center = v;
-    radius = r;
-    color = c;
-}
-
 float Circle::getRadius(){
     return radius;
+}
+
+string Circle::getName(){
+    return name;
+}
+
+void Circle::setColor(Color const& c){
+    this->color = c;
+}
+
+void Circle::debug(){
+    std::cout<< "Name: " << name << "\n"; 
+    std::cout<< "Center: " << center.x << " " << center.y << "\n";
+    std::cout<< "Radius: " << radius << "\n";
+    std::cout<< "Color: " << color.r << " " << color.g << " " << color.b << "\n";    
+}
+
+bool Circle::operator<(const Circle& crc) const 
+{
+   return radius < crc.radius;
 }
 
 void Circle::draw(Window const& win){
@@ -38,7 +46,7 @@ void Circle::draw(Window const& win){
         rota = make_rotation_mat2(degree * (2 * M_PI / 360));//rad is degree * (2*Pi/360)
         OQ = operator*(ZP, rota); 
         point2 = operator+(OQ, OZ); 
-        win.draw_line(point1.x, point1.y, point2.x, point2.y, color.r + (0.05f * a) , color.g, color.b + (0.05f * a));
+        win.draw_line(point1.x, point1.y, point2.x, point2.y, color.r , color.g, color.b);
         point1 = {point2.x, point2.y};
     }    
 
@@ -58,7 +66,7 @@ void Circle::draw(Window const& win, float thickness){
         rota = make_rotation_mat2(degree * (2 * M_PI / 360));//rad is degree * (2*Pi/360)
         OQ = operator*(ZP, rota); 
         point2 = operator+(OQ, OZ); 
-        win.draw_line(point1.x, point1.y, point2.x, point2.y, color.r + (0.05f * a) , color.g, color.b + (0.05f * a), thickness);
+        win.draw_line(point1.x, point1.y, point2.x, point2.y, color.r, color.g, color.b, thickness);
         point1 = {point2.x, point2.y};
     }    
 

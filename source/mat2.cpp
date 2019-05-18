@@ -1,20 +1,6 @@
 #include "mat2.hpp"
 #include <cmath>
 
-Mat2::Mat2(){
-    e_00 = 1.0f;
-    e_01 = 0.0f;
-    e_10 = 0.0f;
-    e_11 = 1.0f;
-};
-
-Mat2::Mat2(float aa, float ab, float ba, float bb){
-    e_00 = aa;
-    e_01 = ab;
-    e_10 = ba;
-    e_11 = bb;
-};
-
 Mat2& Mat2::operator*=(Mat2 const& m){
     float temp_e_00 = e_00 * m.e_00 + e_01 * m.e_10;
     float temp_e_01 = e_00 * m.e_01 + e_01 * m.e_11;

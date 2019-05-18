@@ -67,3 +67,5 @@ target_link_libraries(clock
 add_dependencies(example glfw nanovg ${COPY_BINARY})
 
 
+#Build aufgabe2und3
+add_executable(aufgabe2und3 aufgabe2und3.cpp)

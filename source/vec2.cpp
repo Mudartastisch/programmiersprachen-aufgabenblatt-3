@@ -1,20 +1,6 @@
 #include <iostream>
 #include "vec2.hpp"
 
-Vec2::Vec2(){
-    x = 0.0f;
-    y = 0.0f;
-};
-Vec2::Vec2(float a, float b){
-    x = a;
-    y = b;
-};
-Vec2::Vec2(const Vec2& temp){
-    x = temp.x;
-    y = temp.y;
-
-};
-
 Vec2 operator+(Vec2 const& u, Vec2 const& v)
 {
     Vec2 temp{u.x + v.x, u.y + v.y};

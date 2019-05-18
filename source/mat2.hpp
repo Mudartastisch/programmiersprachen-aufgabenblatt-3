@@ -11,9 +11,7 @@ float e_01; //  e_00 e_01
 float e_10; //  e_10 e_11
 float e_11;
 
-Mat2();
-Mat2(float aa, float ab, float ba, float bb);
-Mat2(const Mat2& temp);
+Mat2(float aa = 1.0f, float ab = 0.0f, float ba = 0.0f, float bb = 1.0f):e_00(aa), e_01(ab), e_10(ba), e_11(bb) {}
 float det() const;
 
 // TODO (in mat2.cpp) Definition v.operator *=

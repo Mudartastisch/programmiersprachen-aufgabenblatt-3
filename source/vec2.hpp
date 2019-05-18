@@ -7,9 +7,7 @@ struct Vec2
 {
     float x;
     float y;
-    Vec2();
-    Vec2(float a, float b);    
-    Vec2(const Vec2& temp);
+    Vec2(float i = 0, float j = 0):x(i), y(j) {}
 };
 
     Vec2 operator+( Vec2 const& u , Vec2 const& v );
