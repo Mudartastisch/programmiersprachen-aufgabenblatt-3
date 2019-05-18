@@ -1,0 +1,15 @@
+std::map<string,int> matrikelnummern;
+
+// Hinzufuegen von vielen Studenten
+matrikelnummern [ " Max Mustermann " ] = 12345;
+matrikelnummern [ " Erika Mustermann " ] = 23523;
+// ...
+
+exmatrikulation ( matrikelnummer ["Fred Fuchs"]); //Hinzufuegen von Fred weil nicht vorhanden
+
+suchen:
+find() verwenden um zu suchen
+
+einfuegen:
+emplace(mit pair) -> emplace(make_pair("Oskar Fischer", 19500));
+try_emplace(separate Uebergabe von key und value) -> try_emplace("Heinz Wurst", 19550);
