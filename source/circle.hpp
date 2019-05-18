@@ -21,7 +21,7 @@ public:
     float getRadius();
     string getName();
     void setColor(Color const & c);
-    bool operator<(const Circle& rhs) const;
+    bool operator<(const Circle& crc) const;
 
     void debug();
 

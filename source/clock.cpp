@@ -9,6 +9,7 @@
 #include <iostream>
 #include <set>
 #include <string>
+#include "circleSet.hpp"
 
 using namespace std; 
 
@@ -24,7 +25,8 @@ int main(int argc, char* argv[])
   Vec2 circle_c{400.0f, 400.0f};
  
 
-  set<Circle*> active_objects;
+  set<Circle*> active_objects; //can't do the naming thing, did something wrong with circleSet
+
 
   Circle second(circle_c, 200.0f, green, "second");
   Circle minute(circle_c, 100.0f, blue, "minute");
@@ -33,7 +35,7 @@ int main(int argc, char* argv[])
   Circle one(Vec2(475.0f, 275.0f), 25.0f, white, "one");
   Circle two(Vec2(525.0f, 325.0f), 75.0f, white, "two");
   Circle three(Vec2(600.0f, 400.0f), 150.0f, white, "three");
-
+  
   active_objects.insert(&one);
   active_objects.insert(&two);
   active_objects.insert(&three);
