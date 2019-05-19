@@ -8,11 +8,11 @@
 
 #include <iostream>
 
-float Circle::getRadius(){
+float Circle::getRadius() const{
     return radius;
 }
 
-string Circle::getName(){
+string Circle::getName() const{
     return name;
 }
 
@@ -30,6 +30,16 @@ void Circle::debug(){
 bool Circle::operator<(const Circle& crc) const 
 {
    return radius < crc.radius;
+}
+
+bool Circle::operator>(const Circle& crc) const 
+{
+   return radius > crc.radius;
+}
+
+bool Circle::operator==(const Circle& crc) const 
+{
+   return radius == crc.radius;
 }
 
 void Circle::draw(Window const& win){

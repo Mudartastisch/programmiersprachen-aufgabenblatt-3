@@ -18,10 +18,12 @@ private:
 public:
     Circle(Vec2 const& c, float i, Color const& cl, string n):center(c), radius(i), color(cl), name(n) {}
 
-    float getRadius();
-    string getName();
+    float getRadius() const;
+    string getName() const;
     void setColor(Color const & c);
     bool operator<(const Circle& crc) const;
+    bool operator>(const Circle& crc) const;
+    bool operator==(const Circle& crc) const;
 
     void debug();
 
