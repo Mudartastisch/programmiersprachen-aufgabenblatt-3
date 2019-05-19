@@ -17,7 +17,8 @@ private:
     string name;
 public:
     Circle(Vec2 const& c, float i, Color const& cl, string n):center(c), radius(i), color(cl), name(n) {}
-
+    Circle();
+    
     float getRadius() const;
     string getName() const;
     void setColor(Color const & c);

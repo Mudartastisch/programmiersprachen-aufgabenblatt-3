@@ -8,6 +8,12 @@
 
 #include <iostream>
 
+Circle::Circle(){
+    center = Vec2(0.0f, 0.0f);
+    radius = 0.0f;
+    color = Color();
+    name = "default";
+}
 float Circle::getRadius() const{
     return radius;
 }

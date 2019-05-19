@@ -150,3 +150,25 @@ add_executable(aufgabe12 aufgabe_12.cpp)
 
 #Build aufgabe13
 add_executable(aufgabe13 aufgabe_13.cpp)
+
+#Build aufgabe14
+add_executable(aufgabe14
+  aufgabe_14.cpp
+  window.cpp
+  glew.c
+  vec2.hpp
+  vec2.cpp
+  mat2.hpp
+  mat2.cpp
+  circle.hpp
+  circle.cpp
+  rectangle.hpp
+  rectangle.cpp
+  color.hpp
+  )
+  target_link_libraries(aufgabe14
+  glfw
+  ${GLFW_LIBRARIES}
+  nanovg
+  ${OPENGL_LIBRARIES}
+  )
