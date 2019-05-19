@@ -135,3 +135,15 @@ add_executable(aufgabe8
   nanovg
   ${OPENGL_LIBRARIES}
   )
+
+#Build aufgabe9
+add_executable(aufgabe9 aufgabe_9.cpp)
+
+#Build aufgabe10
+add_executable(aufgabe10 aufgabe_10.cpp)
+
+#Build aufgabe11
+add_executable(aufgabe11 aufgabe_11.cpp)
+
+#Build aufgabe12
+add_executable(aufgabe12 aufgabe_12.cpp)
